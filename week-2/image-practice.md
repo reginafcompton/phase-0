@@ -1,1 +1,0 @@
-![image](imgs/site-map.png)
