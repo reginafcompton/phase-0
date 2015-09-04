@@ -69,3 +69,23 @@ footer p:nth-child(4) {
   border-bottom: 1px solid #9a9a9a;
   margin-top: .2em;
 }
+
+/* What is important to know when linking an external file (like a stylesheet) to an HTML file?
+
+Be clear about the link path! Often, you will have the imgs and stylesheets in a different folder: do not forget to include the correct directory in your link path (e.g., href="stylesheets/my-sheet.css").
+
+What tricks did you use to help you with positioning? How hard was it to get the site as you wanted it?
+
+My pair and I used the "float" property to create the two columns, though we could have used a table, as the exemplar website does. For text, we used the "text-align" property to center the text, where needed.
+
+What CSS did you use to modify the element style (like size, color, etc.)
+
+We used a variety of properties: font-weight, color, font-size, and text-align.
+
+Did you modify the HTML to include classes or ids? If so, which did you chose and why? If you didn't, how would you know which one to add to your HTML?
+
+Yes, we included classes. The classes helped us, for instance, generate horizontal lines: we created a class of "line," inserted this class throughout the HTML, and give the class a "border-bottom" property in the CSS. Reusable code!
+
+When you compared your site to the actual code base, which do you think had cleaner code that followed best practices and why?
+
+The Berkshire Hathaway site has one fatal error: inline style. That is, the HTML and CSS are consolidated into a single file – not good practice, at all. */
