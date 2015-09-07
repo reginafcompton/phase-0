@@ -18,3 +18,7 @@ hours_in_year
 minutes_in_10
 age_in_seconds(30)
 author_age
+
+puts 12 + 12
+puts "12" + "12"
+puts "12 + 12"
