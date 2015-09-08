@@ -55,3 +55,7 @@ name. I also find the terminology and conceptual defintions
 a lot to take in. Study, study, study, I suppose.
 
 =end
+
+require "address/my_solution"
+
+require "define-method/my_solution"
