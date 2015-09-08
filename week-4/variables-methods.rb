@@ -55,3 +55,7 @@ name. I also find the terminology and conceptual defintions
 a lot to take in. Study, study, study, I suppose.
 
 =end
+
+<a href = "https://github.com/reginafcompton/phase-0/blob/master/week-4/address/my_solution.rb">Address Solution</a>
+
+<a href = "https://github.com/reginafcompton/phase-0/blob/master/week-4/math/my_solution.rb">Math Solution</a>
