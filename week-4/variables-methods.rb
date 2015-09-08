@@ -56,6 +56,6 @@ a lot to take in. Study, study, study, I suppose.
 
 =end
 
-require "address/my_solution"
+<a href = "https://github.com/reginafcompton/phase-0/blob/master/week-4/address/my_solution.rb">Address Solution</a>
 
-require "math/my_solution"
+<a href = "https://github.com/reginafcompton/phase-0/blob/master/week-4/math/my_solution.rb">Math Solution</a>
