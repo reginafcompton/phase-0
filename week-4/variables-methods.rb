@@ -52,7 +52,7 @@ What was confusing about this material? What made sense?
 I had some difficulty with running an Rspec file. At first,
 I tried to run the "my-solutions" file, but with a .spec file
 name. I also find the terminology and conceptual defintions
-a lot to take in. Study, study, study, I suppose.
+a lot to take in. Study, study, study, study I suppose.
 
 =end
 
