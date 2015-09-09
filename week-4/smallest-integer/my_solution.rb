@@ -11,15 +11,14 @@
 # If +list_of_nums+ is empty the method should return nil
 
 # Solution 1
-# A complex option! I first sorted the objects in the array, then joined the sorted
-# objects together into a string. Then, I made a new array, and I "puts" the zeroth index of this array, i.e., the smallest number.
-# This one does not pass the rspec test, however!
+# A complex option! I first sorted the objects in the array, then joined the sorted objects together into a string.
+#Then, I made a new array, and I "puts" the zeroth index of this array, i.e., the smallest number.
 
 def smallest_integer(list_of_nums)
     list = list_of_nums.sort.join(' ')
     new_array = list.split(' ')
     solution = new_array[0]
-    puts solution.to_i
+    return solution.to_i
 end
 
 # Solution 2
