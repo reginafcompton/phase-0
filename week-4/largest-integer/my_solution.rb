@@ -11,11 +11,11 @@
 # If +list_of_nums+ is empty the method should return nil
 
 # Your Solution Below
-# Solution 1 (does not pass Rspec test)
+# Solution 1
 def largest_integer(list_of_nums)
   sorted_array = list_of_nums.sort.join(' ')
   new_array = sorted_array.split(' ')
-  puts new_array[-1].to_i
+  return new_array[-1].to_i
 end
 
 # Solution 2
