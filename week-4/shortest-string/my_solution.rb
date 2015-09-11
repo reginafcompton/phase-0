@@ -28,14 +28,12 @@ def shortest_string(list_of_words)
     return nil
   elsif list_of_words == ['']
     return ''
-  elsif list_of_words.include? "cat"
-    return "cat"
+  elsif list_of_words.length == 1
+    return list_of_words[0]
   else
     array = list_of_words.sort_by { |x| x.length }
     return array[0]
   end
 end
 
-shortest_string(['zzzzzzz', 'cat', 'apples'])
-
-# I obviously cheated to make this pass the Rspec test. I did not know how to do the following: check if one element resides in an array. I'll need to figure that out.....
+shortest_string(['cat'])
