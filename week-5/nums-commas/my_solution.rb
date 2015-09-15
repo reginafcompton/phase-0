@@ -9,22 +9,23 @@
 # 0. Pseudocode
 
 # Input: an integer (no commas!)
-# Output: a number with commas
-# What are the steps needed to solve the problem?
+# Output: a string (with commas!)
+
+IF num does not need commas – that is, a number less than 1000 – return the number as is
 
 
 # 1. Initial Solution
 
 def separate_comma(random_num)
-  if random_num.to_s.size < 4
+  if random_num.to_s.length < 4
     p random_num
+  else random_num.to_s.length >= 4
+    array = random_num.split('')
+    p array[-4]
   end
-
-  array = random_num.split('')
-  p array[-4]
 end
 
-separate_comma(22999)
+separate_comma(229)
 
 
 
