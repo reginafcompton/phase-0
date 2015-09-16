@@ -1,6 +1,6 @@
 # Numbers to Commas Solo Challenge
 
-# I spent [] hours on this challenge.
+# I spent 5 hours on this challenge.
 
 # Complete each step below according to the challenge directions and
 # include it in this file. Also make sure everything that isn't code
@@ -19,34 +19,42 @@
 
 # 1. Initial Solution
 
-def separate_comma(random_num)
-  num = random_num.to_s
-  if num.length < 4
-    p num
-  elsif num.length < 7
-    array = num.split('')
-    array.insert(-4, ",")
-    p array.join('')
-  elsif num.length < 10
-    array = num.split('')
-    array.insert(-4, ",")
-    array.insert(-8, ",")
-    p array.join('')
-  end
-end
+# def separate_comma(random_num)
+#   num = random_num.to_s
+#   if num.length < 4
+#     p num
+#   elsif num.length < 7
+#     array = num.split('')
+#     array.insert(-4, ",")
+#     p array.join('')
+#   elsif num.length < 10
+#     array = num.split('')
+#     array.insert(-4, ",")
+#     array.insert(-8, ",")
+#     p array.join('')
+#   end
+# end
 
 # 2. Refactored Solution
 
 def separate_comma(random_num)
   num = random_num.to_s
-  if num.length < 4
+  if num.length >= 4
+    array = num.split('')
+    index = -4
+    counter = 4
+    until counter > num.length
+    array.insert(index, ",")
+    index -= 4
+    counter += 3
+    end
+    p array.join('')
+  else
     p num
-  elsif num.length < 7
-    p num.insert(-4, ",")
-  elsif num.length < 10
-    p num.insert(-4, ",").insert(-8, ",")
   end
 end
+
+separate_comma(3333333333)
 
 # 3. Reflection
 
