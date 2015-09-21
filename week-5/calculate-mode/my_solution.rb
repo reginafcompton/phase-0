@@ -79,9 +79,7 @@ def mode(array)
       value == array_sort[index-1] ? hash[value] += 1 : hash[value] = 1
     }
 
-  nested_array = hash.sort_by {|key,value| value}
-
-  p hash.select{|key,val| val == nested_array.max_by{|x|x[1]}[1]}.keys
+  p hash.select{|key,val| val == hash.max_by{|x|x[1]}[1]}.keys
 
 end
 
