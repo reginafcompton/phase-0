@@ -114,59 +114,98 @@
 #   p @bingo_board[4]
 #   end
 # end
-# Refactored Solution
+# Refactored Solution 1
+
+# class BingoBoard
+#   attr_reader :call_letter
+#   attr_reader :call_number
+
+#   def initialize(board)
+#     @bingo_board = board
+#     @call_letter = rand(5)
+#     @call_number = rand(1..100)
+#   end
+
+#   def play
+#     row_1 = @bingo_board[0]
+#     row_2 = @bingo_board[1]
+#     row_3 = @bingo_board[2]
+#     row_4 = @bingo_board[3]
+#     row_5 = @bingo_board[4]
+
+#     @call_letter
+#     @call_number
+
+#     if row_1[@call_letter] == @call_number
+#       row_1[@call_letter] = "X"
+#       p "Yeah!"
+#       p row_1
+#     elsif row_2[@call_letter] == @call_number
+#       row_2[@call_letter] = "X"
+#       p "Yeah!"
+#       p row_2
+#     elsif row_3[@call_letter] == @call_number
+#       row_3[@call_letter] = "X"
+#       p "Yeah!"
+#       p row_3
+#     elsif row_4[@call_letter] == @call_number
+#       row_4[@call_letter] = "X"
+#       p "Yeah!"
+#       p row_4
+#     else
+#       p "Try again. Call another letter and number."
+#     end
+
+#   puts "--- printing board ----"
+
+#   25.times { print "." }
+
+#   puts
+
+#   p row_1
+#   p row_2
+#   p row_3
+#   p row_4
+#   p row_5
+
+#   end
+# end
+
+# #DRIVER CODE (I.E. METHOD CALLS) GO BELOW THIS LINE
+# board = [[47, 44, 71, 8, 88],
+#         [22, 69, 75, 65, 73],
+#         [83, 85, 97, 89, 57],
+#         [25, 31, 96, 68, 51],
+#         [75, 70, 54, 80, 83]]
+
+# new_game = BingoBoard.new(board)
+# new_game.play
+
+
+
+# Refactored Solution 2
 
 class BingoBoard
-  attr_reader :call_letter
-  attr_reader :call_number
 
   def initialize(board)
     @bingo_board = board
-    @call_letter = rand(5)
-    @call_number = rand(1..100)
   end
 
-  def play
-    row_1 = @bingo_board[0]
-    row_2 = @bingo_board[1]
-    row_3 = @bingo_board[2]
-    row_4 = @bingo_board[3]
-    row_5 = @bingo_board[4]
+  def call
+    p @call_letter = rand(5)
+    p @call_number = rand(1..100)
+  end
 
-    @call_letter
-    @call_number
+  def check
 
-    if row_1[@call_letter] == @call_number
-      row_1[@call_letter] = "X"
-      p "Yeah!"
-      p row_1
-    elsif row_2[@call_letter] == @call_number
-      row_2[@call_letter] = "X"
-      p "Yeah!"
-      p row_2
-    elsif row_3[@call_letter] == @call_number
-      row_3[@call_letter] = "X"
-      p "Yeah!"
-      p row_3
-    elsif row_4[@call_letter] == @call_number
-      row_4[@call_letter] = "X"
-      p "Yeah!"
-      p row_4
-    else
-      p "Try again. Call another letter and number."
+    @bingo_board.map! do |row|
+      if row[@call_letter] == @call_number
+        row[@call_letter] = "X"
+        p row
+      else
+        p row
+      end
     end
-
-  puts "--- printing board ----"
-
-  25.times { print "." }
-
-  puts
-
-  p row_1
-  p row_2
-  p row_3
-  p row_4
-  p row_5
 
   end
 end
@@ -179,7 +218,8 @@ board = [[47, 44, 71, 8, 88],
         [75, 70, 54, 80, 83]]
 
 new_game = BingoBoard.new(board)
-new_game.play
+new_game.call
+new_game.check
 
 
 #Reflection
