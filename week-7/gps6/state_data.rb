@@ -1,7 +1,7 @@
 #population density is number of people per square mile as of 2012
 #this data is updated every year with estimates from a 10 year census
 
-
+# A nested hash. The state names are strings; the keys in the nested hash are symbols. STATE_DATA is a constant and has global scope.
 STATE_DATA = {
   "Alabama" => {population_density: 94.65, population: 4822023},
   "Alaska" => {population_density: 1.1111, population: 731449},
@@ -55,3 +55,5 @@ STATE_DATA = {
   "Wisconsin" => {population_density: 105.2, population: 5726398},
   "Wyoming" => {population_density: 5.851, population: 576412}
 }
+
+p STATE_DATA["Wyoming"][:population]

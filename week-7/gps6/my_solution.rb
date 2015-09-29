@@ -5,7 +5,8 @@
 
 # EXPLANATION OF require_relative
 #
-#
+# "Require_relative" is necessary to import content from a file into another file (from the same directory, i.e., "relative to").
+# "Require_relative," by analogy, is a local varible, whereas "require" can be understood as a global one.
 require_relative 'state_data'
 
 class VirusPredictor
