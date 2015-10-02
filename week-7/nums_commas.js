@@ -15,8 +15,7 @@
 //   then subtract 4 from the index number
 //   then add three to the counter
 
-// Solution
-
+// Solution 1
 var separateComma = function(num) {
     var number_string = String(num);
 
@@ -37,6 +36,28 @@ var separateComma = function(num) {
  };
 
 separateComma(6433939393)
+
+// Solution 2
+
+var separateComma = function(num) {
+  var number_string = String(num)
+  var array_num = number_string.split("");
+
+  if (array_num.length < 4){
+    return number_string
+  };
+
+  var index = array_num.length - 4
+
+    for (var counter = 3; counter < array_num.length; counter += 3) {
+    array_num[index] = (array_num[index] + ",");
+    index -= 3;
+  };
+
+  return number_string = array_num.join("")
+ }
+
+console.log(separateComma(8889333));
 
 // Your Own Tests (OPTIONAL)
 
