@@ -1,8 +1,4 @@
 
-// find the average of the array of numbers by(MEAN):
-  // divide total sum variable above by the length of the array variable created above
-    // output: return results, which is a single number (that can have decimal points)
-
 var median = function (array) {
 
   function ascending_order (a, b) {
@@ -10,19 +6,22 @@ var median = function (array) {
   }
   var sortedArray = array.sort(ascending_order);
   var lengthArray = sortedArray.length;
+  console.log(lengthArray)
+  console.log(sortedArray)
 
   if (lengthArray % 2 === 0) {
       var value = lengthArray / 2;
-      return sortedArray[value];
-      return sortedArray[value - 1];
+      console.log(sortedArray[value]);
+      console.log(sortedArray[value - 1]);
     }
   else {
       var value = (lengthArray / 2) - 0.5;
-      return sortedArray[value];
+      console.log(sortedArray[value]);
     }
 };
 
 median([1, 4, 2, 77, 3, 88, 0, 100, 50, 25, 11, 15])
+
 
 
 var sum = function(array) {
@@ -30,12 +29,25 @@ var sum = function(array) {
     for (var x in array) {
       sumTotal += array[x];
     }
-    console.log(sumTotal)
+    console.log(sumTotal);
 };
 
 sum([1, 4, 2, 15])
 
 
-var mean = function(array) {
 
-}
+var mean = function(array) {
+  var sumTotal = 0;
+    for (var x in array) {
+      sumTotal += array[x];
+    }
+  console.log(sumTotal);
+
+  var lengthArray = array.length;
+  console.log(lengthArray)
+
+  var x = sumTotal / lengthArray;
+  console.log(x);
+};
+
+mean([1, 4, 3])
