@@ -1,5 +1,47 @@
 // Add the finished solution here when you receive it.
-// __________________________________________
+function median(array) {
+
+  console.log(array.length);
+  console.log(array.sort());
+
+  var value = array.length/2;
+
+  if (array.length % 2 === 0) {
+      console.log(array.sort()[value], array.sort()[value - 1]);
+    }
+  else {
+      console.log(array.sort()[value-.5]);
+    }
+};
+
+
+
+function sum(array) {
+    var total = 0;
+    for (var x in array) {
+    total += array[x];
+    }
+  return total;
+};
+
+
+
+function sum(array) {
+ var total = 0;
+  for (var x in array) {
+   total += array[x];
+   }
+   console.log(total);
+};
+
+
+
+function mean (array) {
+  sum(array);
+  console.log(array.length);
+  console.log(sum(array) / (array.length));
+};
+
 // Tests:  Do not alter code below this line.
 
 
