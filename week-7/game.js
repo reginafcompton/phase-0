@@ -56,6 +56,9 @@ var empressOttavia = {
 // CHALLENGE ONE
 var challengeOne = "Ottone loves you, and he insists that you reciprocate. You must tell him 'leave me alone' a particular number of times, before he will listen to your pleading. Call the function leaveMe, and give it a parameter between 0 and 10. Guess correctly, and earn a gift from Nero."
 
+var repeat = function(string, times) {
+       return (new Array(times + 1)).join(string + " ");
+    }
 
 var leaveMe = function(num) {
   var randNum = Math.floor(Math.random() * 10) + 1;
@@ -69,9 +72,6 @@ var leaveMe = function(num) {
   }
   else {
     console.log("Just right!");
-    var repeat = function(string, times) {
-       return (new Array(times + 1)).join(string + " ");
-    }
     console.log(repeat("Leave me alone", randNum));
     mistressPoppea.favoriteThings.necklaces += 1;
     console.log("Nicely done! Nero bought you a new necklace, of which you now have "  + mistressPoppea.favoriteThings.necklaces + ".")
