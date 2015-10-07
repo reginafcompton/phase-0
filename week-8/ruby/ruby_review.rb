@@ -11,7 +11,7 @@
     # ELSIF the integer is divisible by 5 and 3 replace it with "buzz"
     # ELSE the integer remains unchanged
 
-# Solution FizzBuzz
+Solution FizzBuzz
 
 def super_fizzbuzz(array)
   array.map! {|i|
@@ -27,7 +27,7 @@ def super_fizzbuzz(array)
   }
 end
 
-# # Driver Code
+# Driver Code
 array = [3, 5, 2, 15]
 p super_fizzbuzz(array)
 
@@ -198,11 +198,35 @@ def num_to_words(num)
   p (eng_a + " " + eng_b + " ").strip!
   end
 end
+
+#Driver Code
 num_to_words(10)
 num_to_words(13)
 num_to_words(30)
 num_to_words(46)
 num_to_words(5)
-num_to_words(0)
+
+# Pseudocode Reverse Words
+# Input: a string
+# Output: a string with each word reversed
+
+# Put the indiviual words of the string into a collection (an array).
+# Iterate over the collection, and reverse each element.
+# Join together the elements in the collection into a string.
+
+# Solution
+def reverse_words(string)
+  if string.empty?
+    string
+  else
+    array = string.split(" ")
+    array.map! {|x| x.reverse + " "}
+    new_string = array.join.strip!
+  end
+end
+
+# Driver Code
+reverse_words("An apple a day keeps the docotor away")
+reverse_words("")
 
 # Reflection
