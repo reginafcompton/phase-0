@@ -200,10 +200,33 @@ for (person in voteCount.treasurer) {
 console.log(officers)
 
 
+
 // __________________________________________
 // Refactored Solution
 
+for (var person in votes){
+  var name = votes[person];
+  for (var title in voteCount){
+    if (voteCount[title][name[title]]) {
+      (voteCount[title][name[title]]) += 1 }
+    else {
+      (voteCount[title][name[title]]) = 1
+    }
+  }
+}
 
+
+
+for (var title in voteCount){
+  var max = 0;
+  for (var name in voteCount[title]){
+    var count = voteCount[title][name];
+    if (count > max) {
+      max = count;
+      var winner = name;
+      officers[title] = winner
+    }
+  }
 
 
 
@@ -211,6 +234,18 @@ console.log(officers)
 // __________________________________________
 // Reflection
 
+// What did you learn about iterating over nested objects in JavaScript?
+// Were you able to find useful methods to help you with this?
+// What concepts were solidified in the process of working through this challenge?
+
+// I learned about the importance of the .hasOwnProperty method, which determines
+// if an object holds values. This method proves essential when comparing values
+// within a given object, since it can check if the object has content in the first place.
+// I solidified my understanding of the (for ... in) loop. I used this loop in
+// nearly every part of the initial solution – I got to practice!
+// The logic of object iteration in JavaScript is straightforward: the (for...in)
+// loop allows the code to inspect the values of an object, and mulitple
+// (for ... in) loops allows the code to inspect the values of nested objects.
 
 
 
