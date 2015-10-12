@@ -55,6 +55,50 @@ var itemTwo = new listItem("pasta sauce", 1)
 console.log(itemTwo.item)
 console.log(itemTwo.quantity)
 
+// Soultion THREEa
+// This solution uses a constructor function and prototypes to create a list and modify it.
+function Groceries() {
+}
+
+Groceries.prototype.addItem = function addItem(list, item, quantity) {
+  list[item] = quantity;
+}
+
+Groceries.prototype.deleteItem = function deleteItem(list, item) {
+  delete list[item];
+}
+
+Groceries.prototype.updateItem = function updateItem(list, item, newQuantity) {
+  list[item] = newQuantity;
+}
+
+// Solution THREEb
+function Groceries() {
+  this.addItem = function(list, item, quantity) {
+    list[item] = quantity;
+  }
+
+  this.deleteItem = function(list, item) {
+    delete list[item];
+  }
+
+  this.updateItem = function(list, item, newQuantity) {
+    list[item] = newQuantity;
+  }
+}
+
+// Driver Code
+var listOne = new Groceries();
+listOne.addItem(listOne, "pears", 8)
+listOne.addItem(listOne, "oranges", 14)
+listOne.addItem(listOne, "chocolateBars", 2)
+listOne.addItem(listOne, "yogurt", 5)
+console.log(listOne)
+listOne.deleteItem(listOne, "pears")
+console.log(listOne)
+listOne.updateItem(listOne, "oranges", 7)
+console.log(listOne)
+
 // What concepts did you solidify in working on this challenge? (reviewing the passing of information, objects, constructors, etc.)
 // What was the most difficult part of this challenge?
 // Did an array or object make more sense to use and why?
