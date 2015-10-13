@@ -81,6 +81,9 @@ def pad(array, min_size, value = nil)
   return pad!(copy, min_size, value)
 end
 
+
+
+
 # 4. Reflection
 
 # Were you successful in breaking the problem down into small steps? Once you had written your pseudocode, were you able to easily translate it into code? What difficulties and successes did you have?

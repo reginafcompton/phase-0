@@ -1,4 +1,4 @@
-// Pseudocode
+// Pseudocode for Grocery List
 // Create an empty container, i.e., an object, which holds a grocery item (string) and the qunatity of this item (an integer).
 // Define four functions. The first, adds a property to the object. The second, deletes a property.
 // The third, updates the property. And the fourth, prints the contents of the container in a readable list.
@@ -98,6 +98,41 @@ listOne.deleteItem(listOne, "pears")
 console.log(listOne)
 listOne.updateItem(listOne, "oranges", 7)
 console.log(listOne)
+
+// Pseudocode for Pad an Array
+// Input: three arguments – an array, a number, and a string (with default value of nil)
+// Output: an array
+
+// Define a function that takes three arguments (see above).
+//   IF - the length of the array is larger than or equal to the number, then log the
+//   the array to the console.
+//   ELSE IF - put the string (or nil) inside the array a particular number of times.
+//   The number of times: the dufference between the array length and the number.
+
+// Solution for Pad an Array
+
+function pad(array, number, value) {
+  if (value === undefined) {
+        var value = 0;
+    }
+
+  if (array.length > number) {
+    return array;
+  }
+
+  var newArray = [];
+  if (array.length < number) {
+    for (var x = number; x > array.length; x -= 1) {
+      newArray.push(value);
+    }
+  }
+  var finalArray = array.concat(newArray);
+  console.log(finalArray);
+}
+
+pad([1, 4, 7], 5, "dog");
+pad([1, 4, 7], 5);
+pad([1, 4, 7]);
 
 // What concepts did you solidify in working on this challenge? (reviewing the passing of information, objects, constructors, etc.)
 // What was the most difficult part of this challenge?

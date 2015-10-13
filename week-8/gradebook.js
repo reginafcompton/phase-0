@@ -73,9 +73,6 @@ var average = function(array) {
 
 
 
-
-
-
 // __________________________________________
 // Test Code:  Do not alter code below this line.
 

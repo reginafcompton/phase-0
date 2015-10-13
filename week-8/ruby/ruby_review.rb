@@ -219,9 +219,9 @@ def reverse_words(string)
   if string.empty?
     string
   else
-    array = string.split(" ")
+    array = string.split
     array.map! {|x| x.reverse + " "}
-    new_string = array.join.strip!
+    p new_string = array.join.strip!
   end
 end
 

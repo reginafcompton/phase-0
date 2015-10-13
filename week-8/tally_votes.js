@@ -75,129 +75,129 @@ var officers = {
 // __________________________________________
 // Initial Solution
 
-for(var person in votes){
-  var name = votes[person];
-    for(var title in name) {
-      var votee = name[title];
+// for(var person in votes){
+//   var name = votes[person];
+//     for(var title in name) {
+//       var votee = name[title];
 
-        if (title == "president") {
-             if (voteCount.president.hasOwnProperty(votee)) {
-               voteCount.president[votee] += 1;
-             }
-             else {
-              voteCount.president[votee] = 1;
-             }
-           }
+//         if (title == "president") {
+//              if (voteCount.president.hasOwnProperty(votee)) {
+//                voteCount.president[votee] += 1;
+//              }
+//              else {
+//               voteCount.president[votee] = 1;
+//              }
+//            }
 
-        else if (title == "vicePresident") {
-             if (voteCount.vicePresident.hasOwnProperty(votee)) {
-                voteCount.vicePresident[votee] += 1;
-             }
-             else {
-              voteCount.vicePresident[votee] = 1;
-             }
-           }
+//         else if (title == "vicePresident") {
+//              if (voteCount.vicePresident.hasOwnProperty(votee)) {
+//                 voteCount.vicePresident[votee] += 1;
+//              }
+//              else {
+//               voteCount.vicePresident[votee] = 1;
+//              }
+//            }
 
-        else if (title == "secretary") {
-             if (voteCount.secretary.hasOwnProperty(votee)) {
-                voteCount.secretary[votee] += 1;
-             }
-             else {
-              voteCount.secretary[votee] = 1;
-             }
-          }
+//         else if (title == "secretary") {
+//              if (voteCount.secretary.hasOwnProperty(votee)) {
+//                 voteCount.secretary[votee] += 1;
+//              }
+//              else {
+//               voteCount.secretary[votee] = 1;
+//              }
+//           }
 
-        else if (title == "treasurer") {
-             if (voteCount.treasurer.hasOwnProperty(votee)) {
-                voteCount.treasurer[votee] += 1;
-             }
-             else {
-              voteCount.treasurer[votee] = 1;
-             }
-          }
+//         else if (title == "treasurer") {
+//              if (voteCount.treasurer.hasOwnProperty(votee)) {
+//                 voteCount.treasurer[votee] += 1;
+//              }
+//              else {
+//               voteCount.treasurer[votee] = 1;
+//              }
+//           }
 
-        }
-      };
+//         }
+//       };
 
-console.log(voteCount);
+// console.log(voteCount);
 
 
-for (var title in voteCount) {
+// for (var title in voteCount) {
 
-  if (title = "president") {
-    var votesCast = voteCount[title];
-    var votesForPresident = 0;
-    for (value in votesCast) {
-      if (votesCast[value] > votesForPresident) {
-          votesForPresident = votesCast[value];
-         }
-      }
-  }
+//   if (title = "president") {
+//     var votesCast = voteCount[title];
+//     var votesForPresident = 0;
+//     for (value in votesCast) {
+//       if (votesCast[value] > votesForPresident) {
+//           votesForPresident = votesCast[value];
+//          }
+//       }
+//   }
 
-  if (title = "vicePresident") {
-    var votesCast = voteCount[title];
-    var votesForVicePresident = 0;
-    for (value in votesCast) {
-      if (votesCast[value] > votesForVicePresident) {
-          votesForVicePresident = votesCast[value];
-         }
-      }
-  }
+//   if (title = "vicePresident") {
+//     var votesCast = voteCount[title];
+//     var votesForVicePresident = 0;
+//     for (value in votesCast) {
+//       if (votesCast[value] > votesForVicePresident) {
+//           votesForVicePresident = votesCast[value];
+//          }
+//       }
+//   }
 
-  if (title = "secretary") {
-      var votesCast = voteCount[title];
-      var votesForSecretary = 0;
-      for (value in votesCast) {
-        if (votesCast[value] > votesForSecretary) {
-            votesForSecretary = votesCast[value];
-           }
-        }
-    }
+//   if (title = "secretary") {
+//       var votesCast = voteCount[title];
+//       var votesForSecretary = 0;
+//       for (value in votesCast) {
+//         if (votesCast[value] > votesForSecretary) {
+//             votesForSecretary = votesCast[value];
+//            }
+//         }
+//     }
 
-  if (title = "treasurer") {
-    var votesCast = voteCount[title];
-    var votesForTreasurer = 0;
-    for (value in votesCast) {
-      if (votesCast[value] > votesForTreasurer) {
-          votesForTreasurer = votesCast[value];
-         }
-      }
-  }
-}
-console.log(votesForPresident);
-console.log(votesForVicePresident);
-console.log(votesForSecretary);
-console.log(votesForTreasurer);
+//   if (title = "treasurer") {
+//     var votesCast = voteCount[title];
+//     var votesForTreasurer = 0;
+//     for (value in votesCast) {
+//       if (votesCast[value] > votesForTreasurer) {
+//           votesForTreasurer = votesCast[value];
+//          }
+//       }
+//   }
+// }
+// console.log(votesForPresident);
+// console.log(votesForVicePresident);
+// console.log(votesForSecretary);
+// console.log(votesForTreasurer);
 
-for (person in voteCount.president) {
-  var value = voteCount.president[person]
-    if (value == votesForPresident) {
-      officers.president = person;
-    }
-}
+// for (person in voteCount.president) {
+//   var value = voteCount.president[person]
+//     if (value == votesForPresident) {
+//       officers.president = person;
+//     }
+// }
 
-for (person in voteCount.vicePresident) {
-  var value = voteCount.vicePresident[person]
-    if (value == votesForVicePresident) {
-      officers.vicePresident = person;
-    }
-}
+// for (person in voteCount.vicePresident) {
+//   var value = voteCount.vicePresident[person]
+//     if (value == votesForVicePresident) {
+//       officers.vicePresident = person;
+//     }
+// }
 
-for (person in voteCount.secretary) {
-  var value = voteCount.secretary[person]
-    if (value == votesForSecretary) {
-      officers.secretary = person;
-    }
-}
+// for (person in voteCount.secretary) {
+//   var value = voteCount.secretary[person]
+//     if (value == votesForSecretary) {
+//       officers.secretary = person;
+//     }
+// }
 
-for (person in voteCount.treasurer) {
-  var value = voteCount.treasurer[person]
-    if (value == votesForTreasurer) {
-      officers.treasurer = person;
-    }
-}
+// for (person in voteCount.treasurer) {
+//   var value = voteCount.treasurer[person]
+//     if (value == votesForTreasurer) {
+//       officers.treasurer = person;
+//     }
+// }
 
-console.log(officers)
+// console.log(officers)
 
 
 
@@ -208,7 +208,7 @@ for (var person in votes){
   var name = votes[person];
   for (var title in voteCount){
     if (voteCount[title][name[title]]) {
-      (voteCount[title][name[title]]) += 1 }
+      (voteCount[title][name[title]]) += 1}
     else {
       (voteCount[title][name[title]]) = 1
     }
@@ -227,6 +227,7 @@ for (var title in voteCount){
       officers[title] = winner
     }
   }
+}
 
 
 
